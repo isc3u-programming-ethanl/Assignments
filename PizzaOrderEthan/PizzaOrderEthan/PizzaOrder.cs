@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PizzaOrderEthan
 {
-    static class Program
+    static class PizzaOrder
     {
         /// <summary>
         /// The main entry point for the application.
