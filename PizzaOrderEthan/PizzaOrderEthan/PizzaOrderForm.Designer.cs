@@ -33,16 +33,16 @@
             this.lblExtraLargePizzaText = new System.Windows.Forms.Label();
             this.lblToppingsChoiceText = new System.Windows.Forms.Label();
             this.lblSubtotalText = new System.Windows.Forms.Label();
-            this.lblPstText = new System.Windows.Forms.Label();
             this.lblGSTText = new System.Windows.Forms.Label();
             this.lblTotalText = new System.Windows.Forms.Label();
             this.nupTypePizza = new System.Windows.Forms.NumericUpDown();
             this.nupToppingsChoice = new System.Windows.Forms.NumericUpDown();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.lblPST = new System.Windows.Forms.Label();
-            this.lblGST = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
+            this.lblHST = new System.Windows.Forms.Label();
+            this.lblSmallPizzaText = new System.Windows.Forms.Label();
+            this.lblMediumPizzaText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nupTypePizza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupToppingsChoice)).BeginInit();
             this.SuspendLayout();
@@ -62,29 +62,29 @@
             // 
             this.lblLargePizzaText.AutoSize = true;
             this.lblLargePizzaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLargePizzaText.Location = new System.Drawing.Point(61, 94);
+            this.lblLargePizzaText.Location = new System.Drawing.Point(59, 250);
             this.lblLargePizzaText.Name = "lblLargePizzaText";
             this.lblLargePizzaText.Size = new System.Drawing.Size(177, 25);
             this.lblLargePizzaText.TabIndex = 1;
-            this.lblLargePizzaText.Text = "Large Pizza = 1";
+            this.lblLargePizzaText.Text = "Large Pizza = 3";
             this.lblLargePizzaText.Click += new System.EventHandler(this.LblLargePizzaText_Click);
             // 
             // lblExtraLargePizzaText
             // 
             this.lblExtraLargePizzaText.AutoSize = true;
             this.lblExtraLargePizzaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExtraLargePizzaText.Location = new System.Drawing.Point(61, 139);
+            this.lblExtraLargePizzaText.Location = new System.Drawing.Point(59, 317);
             this.lblExtraLargePizzaText.Name = "lblExtraLargePizzaText";
             this.lblExtraLargePizzaText.Size = new System.Drawing.Size(239, 25);
             this.lblExtraLargePizzaText.TabIndex = 2;
-            this.lblExtraLargePizzaText.Text = "Extra Large Pizza = 2";
+            this.lblExtraLargePizzaText.Text = "Extra Large Pizza = 4";
             this.lblExtraLargePizzaText.Click += new System.EventHandler(this.LblExtraLargePizzaText_Click);
             // 
             // lblToppingsChoiceText
             // 
             this.lblToppingsChoiceText.AutoSize = true;
             this.lblToppingsChoiceText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToppingsChoiceText.Location = new System.Drawing.Point(59, 195);
+            this.lblToppingsChoiceText.Location = new System.Drawing.Point(53, 376);
             this.lblToppingsChoiceText.Name = "lblToppingsChoiceText";
             this.lblToppingsChoiceText.Size = new System.Drawing.Size(458, 25);
             this.lblToppingsChoiceText.TabIndex = 3;
@@ -95,40 +95,29 @@
             // 
             this.lblSubtotalText.AutoSize = true;
             this.lblSubtotalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotalText.Location = new System.Drawing.Point(110, 241);
+            this.lblSubtotalText.Location = new System.Drawing.Point(109, 451);
             this.lblSubtotalText.Name = "lblSubtotalText";
             this.lblSubtotalText.Size = new System.Drawing.Size(119, 25);
             this.lblSubtotalText.TabIndex = 4;
             this.lblSubtotalText.Text = "Subtotal =";
             this.lblSubtotalText.Click += new System.EventHandler(this.LblSubtotalText_Click);
             // 
-            // lblPstText
-            // 
-            this.lblPstText.AutoSize = true;
-            this.lblPstText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPstText.Location = new System.Drawing.Point(153, 279);
-            this.lblPstText.Name = "lblPstText";
-            this.lblPstText.Size = new System.Drawing.Size(76, 25);
-            this.lblPstText.TabIndex = 5;
-            this.lblPstText.Text = "PST =";
-            this.lblPstText.Click += new System.EventHandler(this.LblPstText_Click);
-            // 
             // lblGSTText
             // 
             this.lblGSTText.AutoSize = true;
             this.lblGSTText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGSTText.Location = new System.Drawing.Point(151, 316);
+            this.lblGSTText.Location = new System.Drawing.Point(151, 506);
             this.lblGSTText.Name = "lblGSTText";
-            this.lblGSTText.Size = new System.Drawing.Size(78, 25);
+            this.lblGSTText.Size = new System.Drawing.Size(77, 25);
             this.lblGSTText.TabIndex = 6;
-            this.lblGSTText.Text = "GST =";
+            this.lblGSTText.Text = "HST =";
             this.lblGSTText.Click += new System.EventHandler(this.LblGSTText_Click);
             // 
             // lblTotalText
             // 
             this.lblTotalText.AutoSize = true;
             this.lblTotalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalText.Location = new System.Drawing.Point(144, 358);
+            this.lblTotalText.Location = new System.Drawing.Point(143, 560);
             this.lblTotalText.Name = "lblTotalText";
             this.lblTotalText.Size = new System.Drawing.Size(85, 25);
             this.lblTotalText.TabIndex = 7;
@@ -138,9 +127,9 @@
             // nupTypePizza
             // 
             this.nupTypePizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nupTypePizza.Location = new System.Drawing.Point(517, 38);
+            this.nupTypePizza.Location = new System.Drawing.Point(523, 38);
             this.nupTypePizza.Maximum = new decimal(new int[] {
-            2,
+            4,
             0,
             0,
             0});
@@ -152,7 +141,7 @@
             // nupToppingsChoice
             // 
             this.nupToppingsChoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nupToppingsChoice.Location = new System.Drawing.Point(517, 195);
+            this.nupToppingsChoice.Location = new System.Drawing.Point(538, 379);
             this.nupToppingsChoice.Maximum = new decimal(new int[] {
             4,
             0,
@@ -167,40 +156,18 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(265, 241);
+            this.lblSubtotal.Location = new System.Drawing.Point(265, 451);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(25, 25);
             this.lblSubtotal.TabIndex = 10;
             this.lblSubtotal.Text = "?";
             this.lblSubtotal.Click += new System.EventHandler(this.LblSubtotal_Click);
             // 
-            // lblPST
-            // 
-            this.lblPST.AutoSize = true;
-            this.lblPST.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPST.Location = new System.Drawing.Point(265, 279);
-            this.lblPST.Name = "lblPST";
-            this.lblPST.Size = new System.Drawing.Size(25, 25);
-            this.lblPST.TabIndex = 11;
-            this.lblPST.Text = "?";
-            this.lblPST.Click += new System.EventHandler(this.LblPST_Click);
-            // 
-            // lblGST
-            // 
-            this.lblGST.AutoSize = true;
-            this.lblGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGST.Location = new System.Drawing.Point(265, 316);
-            this.lblGST.Name = "lblGST";
-            this.lblGST.Size = new System.Drawing.Size(25, 25);
-            this.lblGST.TabIndex = 12;
-            this.lblGST.Text = "?";
-            this.lblGST.Click += new System.EventHandler(this.LblGST_Click);
-            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(265, 358);
+            this.lblTotal.Location = new System.Drawing.Point(265, 560);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(25, 25);
             this.lblTotal.TabIndex = 13;
@@ -210,7 +177,7 @@
             // btnCalculate
             // 
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(555, 310);
+            this.btnCalculate.Location = new System.Drawing.Point(560, 500);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(157, 31);
             this.btnCalculate.TabIndex = 14;
@@ -218,21 +185,52 @@
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
+            // lblHST
+            // 
+            this.lblHST.AutoSize = true;
+            this.lblHST.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHST.Location = new System.Drawing.Point(265, 506);
+            this.lblHST.Name = "lblHST";
+            this.lblHST.Size = new System.Drawing.Size(25, 25);
+            this.lblHST.TabIndex = 12;
+            this.lblHST.Text = "?";
+            this.lblHST.Click += new System.EventHandler(this.LblHST_Click);
+            // 
+            // lblSmallPizzaText
+            // 
+            this.lblSmallPizzaText.AutoSize = true;
+            this.lblSmallPizzaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSmallPizzaText.Location = new System.Drawing.Point(61, 99);
+            this.lblSmallPizzaText.Name = "lblSmallPizzaText";
+            this.lblSmallPizzaText.Size = new System.Drawing.Size(175, 25);
+            this.lblSmallPizzaText.TabIndex = 15;
+            this.lblSmallPizzaText.Text = "Small Pizza = 1";
+            // 
+            // lblMediumPizzaText
+            // 
+            this.lblMediumPizzaText.AutoSize = true;
+            this.lblMediumPizzaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMediumPizzaText.Location = new System.Drawing.Point(59, 176);
+            this.lblMediumPizzaText.Name = "lblMediumPizzaText";
+            this.lblMediumPizzaText.Size = new System.Drawing.Size(199, 25);
+            this.lblMediumPizzaText.TabIndex = 16;
+            this.lblMediumPizzaText.Text = "Medium Pizza = 2";
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 706);
+            this.Controls.Add(this.lblMediumPizzaText);
+            this.Controls.Add(this.lblSmallPizzaText);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.lblGST);
-            this.Controls.Add(this.lblPST);
+            this.Controls.Add(this.lblHST);
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.nupToppingsChoice);
             this.Controls.Add(this.nupTypePizza);
             this.Controls.Add(this.lblTotalText);
             this.Controls.Add(this.lblGSTText);
-            this.Controls.Add(this.lblPstText);
             this.Controls.Add(this.lblSubtotalText);
             this.Controls.Add(this.lblToppingsChoiceText);
             this.Controls.Add(this.lblExtraLargePizzaText);
@@ -255,16 +253,16 @@
         private System.Windows.Forms.Label lblExtraLargePizzaText;
         private System.Windows.Forms.Label lblToppingsChoiceText;
         private System.Windows.Forms.Label lblSubtotalText;
-        private System.Windows.Forms.Label lblPstText;
         private System.Windows.Forms.Label lblGSTText;
         private System.Windows.Forms.Label lblTotalText;
         private System.Windows.Forms.NumericUpDown nupTypePizza;
         private System.Windows.Forms.NumericUpDown nupToppingsChoice;
         private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.Label lblPST;
-        private System.Windows.Forms.Label lblGST;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Label lblHST;
+        private System.Windows.Forms.Label lblSmallPizzaText;
+        private System.Windows.Forms.Label lblMediumPizzaText;
     }
 }
 
