@@ -1,0 +1,10 @@
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\bin\Debug\PizzaOrderEthan.exe.config
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\bin\Debug\PizzaOrderEthan.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\bin\Debug\PizzaOrderEthan.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.csprojAssemblyReference.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.frmPizzaOrder.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.Properties.Resources.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.csproj.GenerateResource.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.csproj.CoreCompileInputs.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\PizzaOrderEthan\PizzaOrderEthan\obj\Debug\PizzaOrderEthan.pdb

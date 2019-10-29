@@ -3,7 +3,7 @@
  * Created on: 09/20/19
  * Created for: ICS3U Programming
  * Assignment #2 - Falling Objects
- * This program 
+ * This program calculates the distance of an object falling off a cliff
 */
 using System;
 using System.Collections.Generic;
