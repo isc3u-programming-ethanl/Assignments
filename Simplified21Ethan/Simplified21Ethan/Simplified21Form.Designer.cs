@@ -32,6 +32,12 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnHit = new System.Windows.Forms.Button();
             this.btnStay = new System.Windows.Forms.Button();
+            this.lblPlayerCard1 = new System.Windows.Forms.Label();
+            this.lblPlayerCard2 = new System.Windows.Forms.Label();
+            this.lblPlayerCard3 = new System.Windows.Forms.Label();
+            this.lblDealerCard1 = new System.Windows.Forms.Label();
+            this.lblDealerCard2 = new System.Windows.Forms.Label();
+            this.lblDealerCard3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitleText
@@ -78,11 +84,77 @@
             this.btnStay.UseVisualStyleBackColor = true;
             this.btnStay.Click += new System.EventHandler(this.BtnStay_Click);
             // 
+            // lblPlayerCard1
+            // 
+            this.lblPlayerCard1.AutoSize = true;
+            this.lblPlayerCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerCard1.Location = new System.Drawing.Point(56, 68);
+            this.lblPlayerCard1.Name = "lblPlayerCard1";
+            this.lblPlayerCard1.Size = new System.Drawing.Size(122, 24);
+            this.lblPlayerCard1.TabIndex = 4;
+            this.lblPlayerCard1.Text = "Player Card 1";
+            // 
+            // lblPlayerCard2
+            // 
+            this.lblPlayerCard2.AutoSize = true;
+            this.lblPlayerCard2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerCard2.Location = new System.Drawing.Point(56, 185);
+            this.lblPlayerCard2.Name = "lblPlayerCard2";
+            this.lblPlayerCard2.Size = new System.Drawing.Size(122, 24);
+            this.lblPlayerCard2.TabIndex = 5;
+            this.lblPlayerCard2.Text = "Player Card 2";
+            // 
+            // lblPlayerCard3
+            // 
+            this.lblPlayerCard3.AutoSize = true;
+            this.lblPlayerCard3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerCard3.Location = new System.Drawing.Point(56, 292);
+            this.lblPlayerCard3.Name = "lblPlayerCard3";
+            this.lblPlayerCard3.Size = new System.Drawing.Size(122, 24);
+            this.lblPlayerCard3.TabIndex = 6;
+            this.lblPlayerCard3.Text = "Player Card 3";
+            // 
+            // lblDealerCard1
+            // 
+            this.lblDealerCard1.AutoSize = true;
+            this.lblDealerCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerCard1.Location = new System.Drawing.Point(633, 68);
+            this.lblDealerCard1.Name = "lblDealerCard1";
+            this.lblDealerCard1.Size = new System.Drawing.Size(125, 24);
+            this.lblDealerCard1.TabIndex = 7;
+            this.lblDealerCard1.Text = "Dealer Card 1";
+            // 
+            // lblDealerCard2
+            // 
+            this.lblDealerCard2.AutoSize = true;
+            this.lblDealerCard2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerCard2.Location = new System.Drawing.Point(633, 185);
+            this.lblDealerCard2.Name = "lblDealerCard2";
+            this.lblDealerCard2.Size = new System.Drawing.Size(125, 24);
+            this.lblDealerCard2.TabIndex = 8;
+            this.lblDealerCard2.Text = "Dealer Card 2";
+            // 
+            // lblDealerCard3
+            // 
+            this.lblDealerCard3.AutoSize = true;
+            this.lblDealerCard3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerCard3.Location = new System.Drawing.Point(633, 292);
+            this.lblDealerCard3.Name = "lblDealerCard3";
+            this.lblDealerCard3.Size = new System.Drawing.Size(125, 24);
+            this.lblDealerCard3.TabIndex = 9;
+            this.lblDealerCard3.Text = "Dealer Card 3";
+            // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblDealerCard3);
+            this.Controls.Add(this.lblDealerCard2);
+            this.Controls.Add(this.lblDealerCard1);
+            this.Controls.Add(this.lblPlayerCard3);
+            this.Controls.Add(this.lblPlayerCard2);
+            this.Controls.Add(this.lblPlayerCard1);
             this.Controls.Add(this.btnStay);
             this.Controls.Add(this.btnHit);
             this.Controls.Add(this.btnStart);
@@ -101,6 +173,12 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnHit;
         private System.Windows.Forms.Button btnStay;
+        private System.Windows.Forms.Label lblPlayerCard1;
+        private System.Windows.Forms.Label lblPlayerCard2;
+        private System.Windows.Forms.Label lblPlayerCard3;
+        private System.Windows.Forms.Label lblDealerCard1;
+        private System.Windows.Forms.Label lblDealerCard2;
+        private System.Windows.Forms.Label lblDealerCard3;
     }
 }
 
