@@ -34,6 +34,12 @@ namespace Simplified21Ethan
             this.lblDealerCard1.Visible = false;
             this.lblDealerCard2.Visible = false;
             this.lblDealerCard3.Visible = false;
+            this.lblYouWin.Visible = false;
+            this.lblYouLose.Visible = false;
+            this.lblYouTie.Visible = false;
+            this.lblOneOrEleven.Visible = false;
+            this.btnOne.Visible = false;
+            this.btnEleven.Visible = false;
         }
 
         private void LblTitleText_Click(object sender, EventArgs e)
@@ -54,26 +60,71 @@ namespace Simplified21Ethan
             this.lblDealerCard2.Visible = true;
             this.lblDealerCard3.Visible = false;
 
+
             // declare local variables and constants
-            int playerTotal, dealerTotal;
-            const int card1 = 1;
-            const int card2 = 2;
-            const int card3 = 3;
-            const int card4 = 4;
-            const int card5 = 5;
-            const int card6 = 6;
-            const int card7 = 7;
-            const int card8 = 8;
-            const int card9 = 9;
-            const int card10 = 10;
+            int playerTotal = 0;
+            int dealerTotal = 0;
+            int card1;
+            int card2;
+            int card3;
+            int dealerCard1;
+            int dealerCard2;
+            int dealerCard3;
 
-       
+            // make random number generator variables
+            const int MIN_VALUE = 1;
+            const int MAX_VALUE = 10;
+            Random randomNumberGenerator = new Random();
 
+            // get the random generated player card numbers
+            card1 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+            card2 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+            card3 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+
+            // get the random generated dealer card numbers
+            dealerCard1 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+            dealerCard2 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+            dealerCard3 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+
+            // set the totals for player and dealer
+            playerTotal = card1 + card2 + card3;
+            dealerTotal = dealerCard1 + dealerCard2 + dealerCard3;
+
+            this.lblPlayerCard1.Text = Convert.ToString(card1);
+            this.lblPlayerCard2.Text = Convert.ToString(card2);
+            this.lblPlayerCard3.Text = Convert.ToString(card3);
+
+            this.lblDealerCard1.Text = Convert.ToString(dealerCard1);
+            this.lblDealerCard2.Text = Convert.ToString(dealerCard2);
+            this.lblDealerCard3.Text = Convert.ToString(dealerCard3);
+
+            if (playerTotal <= 21)
+                if (dealerTotal <= 21)
+            {
+                    this.lblYouTie.Visible = false;
+
+
+                   
+            }
+
+            if (card1 == 1)
+            {
+                this.btnOne.Visible = true;
+                this.btnEleven.Visible = true;
+                this.lblOneOrEleven.Visible = true;
+ 
+            }
+            else if (card2 == 1)
+            {
+                this.btnOne.Visible = true;
+                this.btnEleven.Visible = true;
+                this.lblOneOrEleven.Visible = true;
+            }
         }
 
         private void BtnHit_Click(object sender, EventArgs e)
         {
-
+            this.lblPlayerCard3.Visible = true;
         }
 
         private void BtnStay_Click(object sender, EventArgs e)
