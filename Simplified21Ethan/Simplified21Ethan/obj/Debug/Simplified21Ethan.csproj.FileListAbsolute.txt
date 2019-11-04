@@ -8,3 +8,13 @@ N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\Simplifi
 N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.csproj.CoreCompileInputs.cache
 N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.exe
 N:\Classes\Sem1-Fall2019\ICS3U Programming\LEthan (s256202)\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.pdb
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\bin\Debug\Simplified21Ethan.exe.config
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\bin\Debug\Simplified21Ethan.exe
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\bin\Debug\Simplified21Ethan.pdb
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.csprojAssemblyReference.cache
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.Properties.Resources.resources
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.frmSimplified21.resources
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.csproj.GenerateResource.cache
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.csproj.CoreCompileInputs.cache
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.exe
+C:\Users\ethan\Documents\GitHub\Assignments\Simplified21Ethan\Simplified21Ethan\obj\Debug\Simplified21Ethan.pdb

@@ -44,6 +44,8 @@
             this.btnOne = new System.Windows.Forms.Button();
             this.btnEleven = new System.Windows.Forms.Button();
             this.lblOneOrEleven = new System.Windows.Forms.Label();
+            this.lblPlayerTotal = new System.Windows.Forms.Label();
+            this.lblDealerTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitleText
@@ -124,7 +126,7 @@
             // 
             this.lblDealerCard1.AutoSize = true;
             this.lblDealerCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealerCard1.Location = new System.Drawing.Point(633, 68);
+            this.lblDealerCard1.Location = new System.Drawing.Point(654, 68);
             this.lblDealerCard1.Name = "lblDealerCard1";
             this.lblDealerCard1.Size = new System.Drawing.Size(125, 24);
             this.lblDealerCard1.TabIndex = 7;
@@ -134,7 +136,7 @@
             // 
             this.lblDealerCard2.AutoSize = true;
             this.lblDealerCard2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealerCard2.Location = new System.Drawing.Point(633, 185);
+            this.lblDealerCard2.Location = new System.Drawing.Point(654, 185);
             this.lblDealerCard2.Name = "lblDealerCard2";
             this.lblDealerCard2.Size = new System.Drawing.Size(125, 24);
             this.lblDealerCard2.TabIndex = 8;
@@ -144,7 +146,7 @@
             // 
             this.lblDealerCard3.AutoSize = true;
             this.lblDealerCard3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealerCard3.Location = new System.Drawing.Point(633, 292);
+            this.lblDealerCard3.Location = new System.Drawing.Point(655, 292);
             this.lblDealerCard3.Name = "lblDealerCard3";
             this.lblDealerCard3.Size = new System.Drawing.Size(125, 24);
             this.lblDealerCard3.TabIndex = 9;
@@ -189,6 +191,7 @@
             this.btnOne.TabIndex = 14;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.BtnOne_Click);
             // 
             // btnEleven
             // 
@@ -199,6 +202,7 @@
             this.btnEleven.TabIndex = 15;
             this.btnEleven.Text = "11";
             this.btnEleven.UseVisualStyleBackColor = true;
+            this.btnEleven.Click += new System.EventHandler(this.BtnEleven_Click);
             // 
             // lblOneOrEleven
             // 
@@ -206,15 +210,37 @@
             this.lblOneOrEleven.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneOrEleven.Location = new System.Drawing.Point(323, 280);
             this.lblOneOrEleven.Name = "lblOneOrEleven";
-            this.lblOneOrEleven.Size = new System.Drawing.Size(132, 75);
+            this.lblOneOrEleven.Size = new System.Drawing.Size(131, 75);
             this.lblOneOrEleven.TabIndex = 16;
-            this.lblOneOrEleven.Text = "Do you want\r\nyour 1 to be \r\na 1 or 11";
+            this.lblOneOrEleven.Text = "Do you want\r\nto have a\r\n1 or 11";
+            // 
+            // lblPlayerTotal
+            // 
+            this.lblPlayerTotal.AutoSize = true;
+            this.lblPlayerTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerTotal.Location = new System.Drawing.Point(241, 26);
+            this.lblPlayerTotal.Name = "lblPlayerTotal";
+            this.lblPlayerTotal.Size = new System.Drawing.Size(118, 24);
+            this.lblPlayerTotal.TabIndex = 17;
+            this.lblPlayerTotal.Text = "Player Total: ";
+            // 
+            // lblDealerTotal
+            // 
+            this.lblDealerTotal.AutoSize = true;
+            this.lblDealerTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerTotal.Location = new System.Drawing.Point(457, 26);
+            this.lblDealerTotal.Name = "lblDealerTotal";
+            this.lblDealerTotal.Size = new System.Drawing.Size(121, 24);
+            this.lblDealerTotal.TabIndex = 18;
+            this.lblDealerTotal.Text = "Dealer Total: ";
             // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblDealerTotal);
+            this.Controls.Add(this.lblPlayerTotal);
             this.Controls.Add(this.lblOneOrEleven);
             this.Controls.Add(this.btnEleven);
             this.Controls.Add(this.btnOne);
@@ -257,6 +283,8 @@
         private System.Windows.Forms.Button btnOne;
         private System.Windows.Forms.Button btnEleven;
         private System.Windows.Forms.Label lblOneOrEleven;
+        private System.Windows.Forms.Label lblPlayerTotal;
+        private System.Windows.Forms.Label lblDealerTotal;
     }
 }
 

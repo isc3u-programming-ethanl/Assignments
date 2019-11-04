@@ -14,6 +14,7 @@ namespace Simplified21Ethan
     {
         const int MIN_VALUE = 1;
         const int MAX_VALUE = 10;
+
         Random randomNumberGenerator;
 
         public frmSimplified21()
@@ -40,9 +41,16 @@ namespace Simplified21Ethan
             this.lblOneOrEleven.Visible = false;
             this.btnOne.Visible = false;
             this.btnEleven.Visible = false;
+            this.lblPlayerTotal.Visible = false;
+            this.lblDealerTotal.Visible = false;
         }
 
         private void LblTitleText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnStay_Click(object sender, EventArgs e)
         {
 
         }
@@ -58,7 +66,9 @@ namespace Simplified21Ethan
             this.lblPlayerCard3.Visible = false;
             this.lblDealerCard1.Visible = true;
             this.lblDealerCard2.Visible = true;
-            this.lblDealerCard3.Visible = false;
+            this.lblDealerCard3.Visible = true;
+            this.lblPlayerTotal.Visible = true;
+            this.lblDealerTotal.Visible = true;
 
 
             // declare local variables and constants
@@ -70,6 +80,7 @@ namespace Simplified21Ethan
             int dealerCard1;
             int dealerCard2;
             int dealerCard3;
+           
 
             // make random number generator variables
             const int MIN_VALUE = 1;
@@ -87,7 +98,7 @@ namespace Simplified21Ethan
             dealerCard3 = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
 
             // set the totals for player and dealer
-            playerTotal = card1 + card2 + card3;
+            playerTotal = card1 + card2;
             dealerTotal = dealerCard1 + dealerCard2 + dealerCard3;
 
             this.lblPlayerCard1.Text = Convert.ToString(card1);
@@ -98,38 +109,70 @@ namespace Simplified21Ethan
             this.lblDealerCard2.Text = Convert.ToString(dealerCard2);
             this.lblDealerCard3.Text = Convert.ToString(dealerCard3);
 
-            if (playerTotal <= 21)
-                if (dealerTotal <= 21)
+            this.lblPlayerTotal.Text = Convert.ToString(playerTotal);
+            this.lblDealerTotal.Text = Convert.ToString(dealerTotal);
+
+
+            if (playerTotal == dealerTotal)
             {
-                    this.lblYouTie.Visible = false;
-
-
-                   
+                this.lblYouTie.Visible = true;
             }
+            if (playerTotal <= 21)
+                if (dealerTotal > 21)
+                {
+                    this.lblYouWin.Visible = true;
+                }
+             if (playerTotal > 21)
+                if (dealerTotal <= 21)
+                {
+                    this.lblYouLose.Visible = true;
+                }
+             if (playerTotal == 21)
+                if (dealerTotal < 21)
+                {
+                    this.lblYouWin.Visible = true;
+                }
+             if (playerTotal < 21)
+                if (dealerTotal == 21)
+                {
+                    this.lblYouLose.Visible = true;
+                }
 
             if (card1 == 1)
             {
                 this.btnOne.Visible = true;
                 this.btnEleven.Visible = true;
                 this.lblOneOrEleven.Visible = true;
- 
+
             }
-            else if (card2 == 1)
+
+            if (card2 == 1)
             {
                 this.btnOne.Visible = true;
                 this.btnEleven.Visible = true;
                 this.lblOneOrEleven.Visible = true;
+
             }
         }
-
         private void BtnHit_Click(object sender, EventArgs e)
         {
             this.lblPlayerCard3.Visible = true;
         }
 
-        private void BtnStay_Click(object sender, EventArgs e)
+        private void BtnOne_Click(object sender, EventArgs e)
         {
+            // hide the menu for "1 or 11"
+            this.lblOneOrEleven.Visible = false;
+            this.btnOne.Visible = false;
+            this.btnEleven.Visible = false;
+        }
 
+        private void BtnEleven_Click(object sender, EventArgs e)
+        {
+            // hide the menu for "1 or 11"
+            this.lblOneOrEleven.Visible = false;
+            this.btnOne.Visible = false;
+            this.btnEleven.Visible = false;
         }
     }
 }
