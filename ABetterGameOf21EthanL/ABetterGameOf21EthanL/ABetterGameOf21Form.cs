@@ -34,9 +34,8 @@ namespace ABetterGameOf21EthanL
         
         private void NewDeck()
         {
-            balance = 100;
             this.lblBalance.Text = "Your Balance: " + balance + "$";
-
+            
             listOfCardImages.Clear();
             listOfCardValues.Clear();
 
@@ -370,7 +369,11 @@ namespace ABetterGameOf21EthanL
             this.btnStay.Enabled = false;
             this.btnHit.Enabled = false;
             this.picPlayerCard3.Visible = false;
+            this.btnBet.Enabled = false;
+            this.nudBet.Enabled = false;
             balance = 100;
+
+            this.nudBet.Text = "0";
 
             // Call the NewDeck function when the form loads
             NewDeck();
@@ -389,7 +392,7 @@ namespace ABetterGameOf21EthanL
             DealerDealCard3(ref picDealerCard3, card3);
 
             this.picPlayerCard3.Visible = false;
-
+            this.nudBet.Text = "0";
 
             // call the declareWinner function
             declareWinner();
@@ -410,6 +413,7 @@ namespace ABetterGameOf21EthanL
             DealerDealCard(ref picDealerCard1, card1);
             DealerDealCard2(ref picDealerCard2, card2);
             DealerDealCard3(ref picDealerCard3, card3);
+            this.nudBet.Text = "0";
 
             // call the declareWinner function
             declareWinner();
@@ -438,6 +442,10 @@ namespace ABetterGameOf21EthanL
             this.lblYouLose.Visible = false;
             this.lblYouTie.Visible = false;
             this.picPlayerCard3.Visible = false;
+            this.btnBet.Enabled = true;
+            this.nudBet.Enabled = true;
+            this.nudBet.Text = "0";
+            this.btnPlay.Enabled = false;
 
             storedBalance = balance;
 
@@ -463,25 +471,25 @@ namespace ABetterGameOf21EthanL
             {
                 this.lblYouWin.Visible = true;
                 balance = balance + amountBettedOn;
-                this.lblBalance.Text = "Balance " + balance + "$";
+                this.lblBalance.Text = "Your Balance: " + balance + "$";
             }
             else if (cardTotal > 21)
             {
                 this.lblYouLose.Visible = true;
                 balance = balance - amountBettedOn;
-                this.lblBalance.Text = "Balance " + balance + "$";
+                this.lblBalance.Text = "Your Balance: " + balance + "$";
             }
             else if (cardTotal > dealerCardTotal)
             {
                 this.lblYouWin.Visible = true;
                 balance = balance + amountBettedOn;
-                this.lblBalance.Text = "Balance " + balance + "$";
+                this.lblBalance.Text = "Your Balance: " + balance + "$";
             }
             else
             {
                 this.lblYouLose.Visible = true;
                 balance = balance - amountBettedOn;
-                this.lblBalance.Text = "Balance " + balance + "$";
+                this.lblBalance.Text = "Your Balance: " + balance + "$";
             }
 
             if (listOfCardImages.Count() < 6)
@@ -489,18 +497,26 @@ namespace ABetterGameOf21EthanL
                 MessageBox.Show("You ran out of cards. Reshuffling deck!", "Error");
 
                 NewDeck();
-
-
             }
+
+            if (balance <= 0)
+            {
+                MessageBox.Show("You are broke. Starting a new game!", "Error"); 
+            }
+
             // disable buttons
             btnHit.Enabled = false;
             btnStay.Enabled = false;
+            this.btnPlay.Enabled = true;
+            this.btnBet.Enabled = false;
+            this.nudBet.Enabled = false;
+            amountBettedOn = 0;
         }
 
         private void MniNewGame_Click(object sender, EventArgs e)
         {
-            NewDeck();
             balance = 100;
+            NewDeck();
         }
 
         private void MniExit_Click(object sender, EventArgs e)
@@ -518,7 +534,30 @@ namespace ABetterGameOf21EthanL
         private void BtnBet_Click(object sender, EventArgs e)
         {
             amountBettedOn = int.Parse(this.nudBet.Text);
-            
+            this.btnBet.Enabled = false;
+            this.nudBet.Enabled = false;
+
+
+            if (amountBettedOn == 0)
+            {
+                MessageBox.Show("I'll pass on betting this round", "Your Choice");
+            }
+            else if (MessageBox.Show("You are betting " + amountBettedOn + "$ Are you sure?", "Error", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                this.btnBet.Enabled = false;
+                this.nudBet.Enabled = false;
+            }
+            else
+            {
+                this.btnBet.Enabled = true;
+                this.nudBet.Enabled = true;
+            }
+
+
+
+
+
+
         }
     }
 }
