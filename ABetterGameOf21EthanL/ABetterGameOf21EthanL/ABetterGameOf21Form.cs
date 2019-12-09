@@ -17,10 +17,10 @@ namespace ABetterGameOf21EthanL
         int[] totalCardValue = new int[MAX_ARRAY_SIZE];
         int[] totalDealerCardValue = new int[MAX_ARRAY_SIZE];
 
-
-        const int MIN_VALUE = 1;
-        const int MAX_VALUE = 11;
         const int MAX_ARRAY_SIZE = 3;
+        int balance = 100;
+        int amountBettedOn = 0;
+        int storedBalance = 0;
 
         Random randomNumberGenerator;
  
@@ -34,6 +34,9 @@ namespace ABetterGameOf21EthanL
         
         private void NewDeck()
         {
+            balance = 100;
+            this.lblBalance.Text = "Your Balance: " + balance + "$";
+
             listOfCardImages.Clear();
             listOfCardValues.Clear();
 
@@ -367,6 +370,7 @@ namespace ABetterGameOf21EthanL
             this.btnStay.Enabled = false;
             this.btnHit.Enabled = false;
             this.picPlayerCard3.Visible = false;
+            balance = 100;
 
             // Call the NewDeck function when the form loads
             NewDeck();
@@ -423,6 +427,7 @@ namespace ABetterGameOf21EthanL
 
             this.lblPlayerTotal.Text = "???";
             this.lblDealerTotal.Text = "???";
+            this.lblBalance.Text = "Your Balance: " + balance + "$";
 
             // Enable the hit and stay buttons
             this.btnHit.Enabled = true;
@@ -433,6 +438,8 @@ namespace ABetterGameOf21EthanL
             this.lblYouLose.Visible = false;
             this.lblYouTie.Visible = false;
             this.picPlayerCard3.Visible = false;
+
+            storedBalance = balance;
 
         }
 
@@ -450,22 +457,31 @@ namespace ABetterGameOf21EthanL
             if (cardTotal == dealerCardTotal)
             {
                 this.lblYouTie.Visible = true;
+                
             }
             else if (dealerCardTotal > 21)
             {
                 this.lblYouWin.Visible = true;
+                balance = balance + amountBettedOn;
+                this.lblBalance.Text = "Balance " + balance + "$";
             }
             else if (cardTotal > 21)
             {
                 this.lblYouLose.Visible = true;
+                balance = balance - amountBettedOn;
+                this.lblBalance.Text = "Balance " + balance + "$";
             }
             else if (cardTotal > dealerCardTotal)
             {
                 this.lblYouWin.Visible = true;
+                balance = balance + amountBettedOn;
+                this.lblBalance.Text = "Balance " + balance + "$";
             }
             else
             {
                 this.lblYouLose.Visible = true;
+                balance = balance - amountBettedOn;
+                this.lblBalance.Text = "Balance " + balance + "$";
             }
 
             if (listOfCardImages.Count() < 6)
@@ -479,6 +495,30 @@ namespace ABetterGameOf21EthanL
             // disable buttons
             btnHit.Enabled = false;
             btnStay.Enabled = false;
+        }
+
+        private void MniNewGame_Click(object sender, EventArgs e)
+        {
+            NewDeck();
+            balance = 100;
+        }
+
+        private void MniExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit?", "Exit Menu", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void BtnBet_Click(object sender, EventArgs e)
+        {
+            amountBettedOn = int.Parse(this.nudBet.Text);
+            
         }
     }
 }
