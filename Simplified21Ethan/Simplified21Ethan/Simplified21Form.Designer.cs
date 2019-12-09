@@ -42,12 +42,24 @@
             this.lblPlayerTotal = new System.Windows.Forms.Label();
             this.lblDealerTotal = new System.Windows.Forms.Label();
             this.btnPlay = new System.Windows.Forms.Button();
+            this.picPlayerCard1 = new System.Windows.Forms.PictureBox();
+            this.picPlayerCard2 = new System.Windows.Forms.PictureBox();
+            this.picPlayerCard3 = new System.Windows.Forms.PictureBox();
+            this.picDealerCard1 = new System.Windows.Forms.PictureBox();
+            this.picDealerCard2 = new System.Windows.Forms.PictureBox();
+            this.picDealerCard3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHit
             // 
             this.btnHit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHit.Location = new System.Drawing.Point(12, 366);
+            this.btnHit.Location = new System.Drawing.Point(155, 380);
             this.btnHit.Name = "btnHit";
             this.btnHit.Size = new System.Drawing.Size(92, 39);
             this.btnHit.TabIndex = 2;
@@ -58,7 +70,7 @@
             // btnStay
             // 
             this.btnStay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStay.Location = new System.Drawing.Point(687, 366);
+            this.btnStay.Location = new System.Drawing.Point(533, 380);
             this.btnStay.Name = "btnStay";
             this.btnStay.Size = new System.Drawing.Size(101, 39);
             this.btnStay.TabIndex = 3;
@@ -187,11 +199,77 @@
             this.btnPlay.UseVisualStyleBackColor = true;
             this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
+            // picPlayerCard1
+            // 
+            this.picPlayerCard1.Image = global::Simplified21Ethan.Properties.Resources.yellow_back;
+            this.picPlayerCard1.Location = new System.Drawing.Point(33, 26);
+            this.picPlayerCard1.Name = "picPlayerCard1";
+            this.picPlayerCard1.Size = new System.Drawing.Size(116, 127);
+            this.picPlayerCard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayerCard1.TabIndex = 20;
+            this.picPlayerCard1.TabStop = false;
+            // 
+            // picPlayerCard2
+            // 
+            this.picPlayerCard2.Image = global::Simplified21Ethan.Properties.Resources.yellow_back;
+            this.picPlayerCard2.Location = new System.Drawing.Point(33, 159);
+            this.picPlayerCard2.Name = "picPlayerCard2";
+            this.picPlayerCard2.Size = new System.Drawing.Size(116, 127);
+            this.picPlayerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayerCard2.TabIndex = 21;
+            this.picPlayerCard2.TabStop = false;
+            // 
+            // picPlayerCard3
+            // 
+            this.picPlayerCard3.Image = global::Simplified21Ethan.Properties.Resources.yellow_back;
+            this.picPlayerCard3.Location = new System.Drawing.Point(33, 292);
+            this.picPlayerCard3.Name = "picPlayerCard3";
+            this.picPlayerCard3.Size = new System.Drawing.Size(116, 127);
+            this.picPlayerCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayerCard3.TabIndex = 22;
+            this.picPlayerCard3.TabStop = false;
+            // 
+            // picDealerCard1
+            // 
+            this.picDealerCard1.Image = global::Simplified21Ethan.Properties.Resources.yellow_back;
+            this.picDealerCard1.Location = new System.Drawing.Point(649, 26);
+            this.picDealerCard1.Name = "picDealerCard1";
+            this.picDealerCard1.Size = new System.Drawing.Size(116, 127);
+            this.picDealerCard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDealerCard1.TabIndex = 23;
+            this.picDealerCard1.TabStop = false;
+            // 
+            // picDealerCard2
+            // 
+            this.picDealerCard2.Image = global::Simplified21Ethan.Properties.Resources.yellow_back;
+            this.picDealerCard2.Location = new System.Drawing.Point(649, 159);
+            this.picDealerCard2.Name = "picDealerCard2";
+            this.picDealerCard2.Size = new System.Drawing.Size(116, 127);
+            this.picDealerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDealerCard2.TabIndex = 24;
+            this.picDealerCard2.TabStop = false;
+            // 
+            // picDealerCard3
+            // 
+            this.picDealerCard3.Image = global::Simplified21Ethan.Properties.Resources.yellow_back;
+            this.picDealerCard3.Location = new System.Drawing.Point(649, 292);
+            this.picDealerCard3.Name = "picDealerCard3";
+            this.picDealerCard3.Size = new System.Drawing.Size(116, 127);
+            this.picDealerCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDealerCard3.TabIndex = 25;
+            this.picDealerCard3.TabStop = false;
+            // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.picDealerCard3);
+            this.Controls.Add(this.picDealerCard2);
+            this.Controls.Add(this.picDealerCard1);
+            this.Controls.Add(this.picPlayerCard3);
+            this.Controls.Add(this.picPlayerCard2);
+            this.Controls.Add(this.picPlayerCard1);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.lblDealerTotal);
             this.Controls.Add(this.lblPlayerTotal);
@@ -209,6 +287,12 @@
             this.Name = "frmSimplified21";
             this.Text = "Simplified 21 by Ethan";
             this.Load += new System.EventHandler(this.FrmSimplified21_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +313,12 @@
         private System.Windows.Forms.Label lblPlayerTotal;
         private System.Windows.Forms.Label lblDealerTotal;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.PictureBox picPlayerCard1;
+        private System.Windows.Forms.PictureBox picPlayerCard2;
+        private System.Windows.Forms.PictureBox picPlayerCard3;
+        private System.Windows.Forms.PictureBox picDealerCard1;
+        private System.Windows.Forms.PictureBox picDealerCard2;
+        private System.Windows.Forms.PictureBox picDealerCard3;
     }
 }
 

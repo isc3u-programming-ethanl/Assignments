@@ -19,6 +19,9 @@ namespace Simplified21Ethan
 {
     public partial class frmSimplified21 : Form
     {
+        List<Image> listOfCardImages = new List<Image>();
+        List<int> listOfCardValues = new List<int>();
+
         const int MIN_VALUE = 1;
         const int MAX_VALUE = 11;
 
@@ -59,8 +62,93 @@ namespace Simplified21Ethan
             this.btnStay.Visible = true;
             this.btnStay.Enabled = false;
             this.btnHit.Enabled = false;
-        }
 
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2D;
+            listOfCardImages[0] = Properties.Resources._2H;
+            listOfCardImages[0] = Properties.Resources._2S;
+            listOfCardImages[0] = Properties.Resources._3C;
+            listOfCardImages[0] = Properties.Resources._3D;
+            listOfCardImages[0] = Properties.Resources._3H;
+            listOfCardImages[0] = Properties.Resources._3S;
+            listOfCardImages[0] = Properties.Resources._4C;
+            listOfCardImages[0] = Properties.Resources._4D;
+            listOfCardImages[0] = Properties.Resources._4H;
+            listOfCardImages[0] = Properties.Resources._4S;
+            listOfCardImages[0] = Properties.Resources._5C;
+            listOfCardImages[0] = Properties.Resources._5D;
+            listOfCardImages[0] = Properties.Resources._5H;
+            listOfCardImages[0] = Properties.Resources._5S;
+            listOfCardImages[0] = Properties.Resources._6C;
+            listOfCardImages[0] = Properties.Resources._6D;
+            listOfCardImages[0] = Properties.Resources._6H;
+            listOfCardImages[0] = Properties.Resources._6S;
+            listOfCardImages[0] = Properties.Resources._7C;
+            listOfCardImages[0] = Properties.Resources._7D;
+            listOfCardImages[0] = Properties.Resources._7H;
+            listOfCardImages[0] = Properties.Resources._7S;
+            listOfCardImages[0] = Properties.Resources._8C;
+            listOfCardImages[0] = Properties.Resources._8D;
+            listOfCardImages[0] = Properties.Resources._8H;
+            listOfCardImages[0] = Properties.Resources._8S;
+            listOfCardImages[0] = Properties.Resources._9C;
+            listOfCardImages[0] = Properties.Resources._9D;
+            listOfCardImages[0] = Properties.Resources._9H;
+            listOfCardImages[0] = Properties.Resources._9S;
+            listOfCardImages[0] = Properties.Resources._10C;
+            listOfCardImages[0] = Properties.Resources._10D;
+            listOfCardImages[0] = Properties.Resources._10H;
+            listOfCardImages[0] = Properties.Resources._10S;
+            listOfCardImages[0] = Properties.Resources.AC;
+            listOfCardImages[0] = Properties.Resources.AD;
+            listOfCardImages[0] = Properties.Resources.AH;
+            listOfCardImages[0] = Properties.Resources.AS;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+            listOfCardImages[0] = Properties.Resources._2C;
+
+
+        }
+        private int DealCard(ref PictureBox pic, int randomIndex)
+        {
+            // Declare local variables
+            int cardValue;
+            Image card;
+
+            randomIndex = randomNumberGenerator.Next(0, listOfCardValues.Count() + 1);
+
+            // Get the card image from randomIndex
+            card = listOfCardImages[randomIndex];
+
+            // Put the card Image in the picture box pass by reference
+            picPlayerCard1.Image = card;
+            picPlayerCard2.Image = card;
+            picPlayerCard3.Image = card;
+            picDealerCard1.Image = card;
+            picDealerCard2.Image = card;
+            picDealerCard3.Image = card;
+
+            // Remove the image from the listOfImages
+            listOfCardImages.RemoveAt(randomIndex);
+
+            // Get the value of the card at the random value
+            cardValue = listOfCardValues[randomIndex];
+
+            // Remove value from listOfValues
+            listOfCardValues.RemoveAt(randomIndex);
+
+            // Return cardValue
+            return cardValue;
+
+        }
         private void BtnStay_Click(object sender, EventArgs e)
         {
             // call the declareWinner function
