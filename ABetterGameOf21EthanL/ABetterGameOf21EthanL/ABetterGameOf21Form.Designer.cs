@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ToolStripMenuItem mnuMenu;
             this.lblPlayerTotal = new System.Windows.Forms.Label();
             this.lblDealerTotal = new System.Windows.Forms.Label();
             this.btnPlay = new System.Windows.Forms.Button();
@@ -44,12 +45,12 @@
             this.picDealerCard3 = new System.Windows.Forms.PictureBox();
             this.lblCardTotal = new System.Windows.Forms.Label();
             this.mniMenu = new System.Windows.Forms.MenuStrip();
-            this.mnuMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.mniNewGame = new System.Windows.Forms.ToolStripMenuItem();
             this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
             this.nudBet = new System.Windows.Forms.NumericUpDown();
             this.btnBet = new System.Windows.Forms.Button();
             this.lblBalance = new System.Windows.Forms.Label();
+            mnuMenu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
@@ -100,7 +101,7 @@
             this.lblYouWin.AutoSize = true;
             this.lblYouWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYouWin.ForeColor = System.Drawing.Color.Lime;
-            this.lblYouWin.Location = new System.Drawing.Point(299, 114);
+            this.lblYouWin.Location = new System.Drawing.Point(305, 114);
             this.lblYouWin.Name = "lblYouWin";
             this.lblYouWin.Size = new System.Drawing.Size(123, 31);
             this.lblYouWin.TabIndex = 9;
@@ -111,7 +112,7 @@
             this.lblYouLose.AutoSize = true;
             this.lblYouLose.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYouLose.ForeColor = System.Drawing.Color.Red;
-            this.lblYouLose.Location = new System.Drawing.Point(300, 114);
+            this.lblYouLose.Location = new System.Drawing.Point(299, 114);
             this.lblYouLose.Name = "lblYouLose";
             this.lblYouLose.Size = new System.Drawing.Size(136, 31);
             this.lblYouLose.TabIndex = 10;
@@ -230,30 +231,32 @@
             this.mniMenu.Dock = System.Windows.Forms.DockStyle.None;
             this.mniMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mniMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuMenu});
+            mnuMenu});
             this.mniMenu.Location = new System.Drawing.Point(0, 0);
             this.mniMenu.Name = "mniMenu";
-            this.mniMenu.Size = new System.Drawing.Size(41, 30);
+            this.mniMenu.Size = new System.Drawing.Size(33, 30);
             this.mniMenu.TabIndex = 23;
             this.mniMenu.Text = "Menu";
             // 
             // mnuMenu
             // 
-            this.mnuMenu.BackColor = System.Drawing.Color.DarkGreen;
-            this.mnuMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.mnuMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            mnuMenu.BackColor = System.Drawing.Color.DarkGreen;
+            mnuMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            mnuMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mniNewGame,
             this.mniExit});
-            this.mnuMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuMenu.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.mnuMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuMenu.ImageTransparentColor = System.Drawing.Color.DarkGreen;
-            this.mnuMenu.Name = "mnuMenu";
-            this.mnuMenu.Size = new System.Drawing.Size(33, 26);
-            this.mnuMenu.Text = "...";
-            this.mnuMenu.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
-            this.mnuMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.mnuMenu.ToolTipText = "Menu";
+            mnuMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mnuMenu.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            mnuMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            mnuMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            mnuMenu.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            mnuMenu.Name = "mnuMenu";
+            mnuMenu.Padding = new System.Windows.Forms.Padding(0);
+            mnuMenu.Size = new System.Drawing.Size(25, 26);
+            mnuMenu.Text = "...";
+            mnuMenu.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
+            mnuMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            mnuMenu.ToolTipText = "Menu";
             // 
             // mniNewGame
             // 
@@ -261,7 +264,7 @@
             this.mniNewGame.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mniNewGame.ForeColor = System.Drawing.Color.SpringGreen;
             this.mniNewGame.Name = "mniNewGame";
-            this.mniNewGame.Size = new System.Drawing.Size(163, 26);
+            this.mniNewGame.Size = new System.Drawing.Size(180, 26);
             this.mniNewGame.Text = "New Game";
             this.mniNewGame.Click += new System.EventHandler(this.MniNewGame_Click);
             // 
@@ -271,7 +274,7 @@
             this.mniExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mniExit.ForeColor = System.Drawing.Color.Red;
             this.mniExit.Name = "mniExit";
-            this.mniExit.Size = new System.Drawing.Size(163, 26);
+            this.mniExit.Size = new System.Drawing.Size(180, 26);
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.MniExit_Click);
             // 
@@ -369,7 +372,6 @@
         private System.Windows.Forms.PictureBox picDealerCard3;
         private System.Windows.Forms.Label lblCardTotal;
         private System.Windows.Forms.MenuStrip mniMenu;
-        private System.Windows.Forms.ToolStripMenuItem mnuMenu;
         private System.Windows.Forms.ToolStripMenuItem mniNewGame;
         private System.Windows.Forms.ToolStripMenuItem mniExit;
         private System.Windows.Forms.NumericUpDown nudBet;
