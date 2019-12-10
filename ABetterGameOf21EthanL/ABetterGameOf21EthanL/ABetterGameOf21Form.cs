@@ -518,6 +518,9 @@ namespace ABetterGameOf21EthanL
             this.btnHit.Enabled = true;
             this.btnStay.Enabled = true;
 
+            // make the maximum of the nudBet to the current balance
+            this.nudBet.Maximum = balance;
+
             // Hide all the labels (win, lose, tie, playerCard3)
             this.lblYouWin.Visible = false;
             this.lblYouLose.Visible = false;
@@ -642,7 +645,7 @@ namespace ABetterGameOf21EthanL
             }
             // when the user bets, a message box will show up saying "are you sure you want to bet $?"
             // if the user clicks "OK" the bet system will disable for that round and if they click cancel, the bet system will re enable giving them a chance to bet again
-            else if (MessageBox.Show("You are betting " + amountBettedOn + "$ Are you sure?", "Error", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            else if (MessageBox.Show("You are betting " + amountBettedOn + "$ Are you sure?", "Your Choice", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 this.btnBet.Enabled = false;
                 this.nudBet.Enabled = false;
